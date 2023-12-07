@@ -1,0 +1,5 @@
+aiohttp==3.8.1
+asyncio==3.4.3
+requests==2.26.0
+npyscreen==4.10.5
+configparser==5.0.2
