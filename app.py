@@ -138,22 +138,22 @@ class WeatherService:
                 selected_hour_data = data['hourly']['data'][index]
                 # Создаем словарь с данными о погоде
                 forecast_data = {
-                    'weather': selected_hour_data['weather'],
-                    'temperature': selected_hour_data['temperature'],
-                    'feels_like': selected_hour_data['feels_like'],
-                    'wind_chill': selected_hour_data['wind_chill'],
-                    'dew_point': selected_hour_data['dew_point'],
-                    'pressure': selected_hour_data['pressure'],
+                    'Погода': selected_hour_data['weather'],
+                    'Температура (ощущается как)': f"{selected_hour_data['temperature']} ({selected_hour_data['feels_like']})",
+                    'Ощущается как': selected_hour_data['feels_like'],
+                    'Точка росы': selected_hour_data['dew_point'],
+                    'Давление': selected_hour_data['pressure'],
                     'ozone': selected_hour_data['ozone'],
-                    'uv_index': selected_hour_data['uv_index'],
-                    'humidity': selected_hour_data['humidity'],
-                    'visibility': selected_hour_data['visibility'],
-                    'probability_precipitation': selected_hour_data['probability']['precipitation'],
-                    'precipitation_type': selected_hour_data['precipitation']['type'],
-                    'wind_speed': selected_hour_data['wind']['speed'],
-                    'wind_gusts': selected_hour_data['wind']['gusts'],
-                    'wind_dir': selected_hour_data['wind']['dir'],
-                    'wind_angle': selected_hour_data['wind']['angle'],
+                    'УФ-индекс': selected_hour_data['uv_index'],
+                    'Влажность': selected_hour_data['humidity'],
+                    'Видимость': selected_hour_data['visibility'],
+                    'Вероятность выпадения осадков': selected_hour_data['probability']['precipitation'],
+                    'Тип осадков': selected_hour_data['precipitation']['type'],
+                    'Скорость ветра': selected_hour_data['wind']['speed'],
+                    'Порывы ветра': selected_hour_data['wind']['gusts'],
+                    'Направление ветра': selected_hour_data['wind']['dir'],
+                    'Угол ветра': selected_hour_data['wind']['angle'],
+                    'Ветро-холодовой индекс': selected_hour_data['wind_chill']
                 }
                 self.request_status = True
                 if self.request_status:
